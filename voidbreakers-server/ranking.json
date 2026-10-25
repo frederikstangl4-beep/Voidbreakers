@@ -1,0 +1,19 @@
+{
+  "entries": {
+    "devfredpro": {
+      "name": "DevFredPro",
+      "power": 4530500000,
+      "updatedAt": 1792918390
+    },
+    "fred2": {
+      "name": "Fred2",
+      "power": 29100000,
+      "updatedAt": 1792918800
+    },
+    "dev2": {
+      "name": "Dev2",
+      "power": 29100000,
+      "updatedAt": 1792918528
+    }
+  }
+}

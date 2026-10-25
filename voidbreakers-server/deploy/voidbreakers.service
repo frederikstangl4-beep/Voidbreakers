@@ -1,0 +1,19 @@
+[Unit]
+Description=Voidbreakers game server
+After=network.target
+
+[Service]
+Type=simple
+User=voidbreakers
+WorkingDirectory=/opt/voidbreakers-server
+ExecStart=/usr/bin/python3 /opt/voidbreakers-server/server.py --host 127.0.0.1 --port 8765 --db /var/lib/voidbreakers/voidbreakers.db
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/voidbreakers
+
+[Install]
+WantedBy=multi-user.target
