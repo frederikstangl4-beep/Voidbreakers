@@ -1,0 +1,13 @@
+# Public HTTPS for the game + websocket server.
+# 1. Point your domain's A/AAAA record at the server.
+# 2. Install caddy, put this in /etc/caddy/Caddyfile, then: systemctl reload caddy
+# 3. Host the game file too (optional) so players load it over https.
+
+your-domain.example {
+    # Serve the game (put voidbreakers-2d(6).html next to this Caddyfile as index.html)
+    root * /srv/voidbreakers
+    file_server
+
+    # WebSocket server on /ws
+    reverse_proxy /ws* ws://127.0.0.1:8765
+}
